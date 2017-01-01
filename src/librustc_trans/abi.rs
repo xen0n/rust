@@ -27,6 +27,7 @@ use cabi_msp430;
 use cabi_sparc;
 use cabi_nvptx;
 use cabi_nvptx64;
+use cabi_bpf;
 use machine::{llalign_of_min, llsize_of, llsize_of_alloc};
 use type_::Type;
 use type_of;
@@ -616,6 +617,7 @@ impl FnType {
             "sparc" => cabi_sparc::compute_abi_info(ccx, self),
             "nvptx" => cabi_nvptx::compute_abi_info(ccx, self),
             "nvptx64" => cabi_nvptx64::compute_abi_info(ccx, self),
+            "bpf" => cabi_bpf::compute_abi_info(ccx, self),
             a => ccx.sess().fatal(&format!("unrecognized arch \"{}\" in target specification", a))
         }
 

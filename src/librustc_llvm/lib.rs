@@ -381,6 +381,11 @@ pub fn initialize_available_targets() {
                  LLVMInitializeNVPTXTarget,
                  LLVMInitializeNVPTXTargetMC,
                  LLVMInitializeNVPTXAsmPrinter);
+    init_target!(llvm_component = "bpf",
+                 LLVMInitializeBPFTargetInfo,
+                 LLVMInitializeBPFTarget,
+                 LLVMInitializeBPFTargetMC,
+                 LLVMInitializeBPFAsmPrinter);
 }
 
 pub fn last_error() -> Option<String> {

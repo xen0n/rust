@@ -101,6 +101,7 @@ mod builder;
 mod cabi_aarch64;
 mod cabi_arm;
 mod cabi_asmjs;
+mod cabi_bpf;
 mod cabi_mips;
 mod cabi_mips64;
 mod cabi_msp430;
