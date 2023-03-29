@@ -251,7 +251,7 @@ fn main() {
     } else if target.contains("windows-gnu") {
         println!("cargo:rustc-link-lib=shell32");
         println!("cargo:rustc-link-lib=uuid");
-    } else if target.contains("netbsd") || target.contains("haiku") || target.contains("darwin") {
+    } else if target.contains("netbsd") || target.contains("haiku") || target.contains("darwin") || target.starts_with("loongarch") {
         println!("cargo:rustc-link-lib=z");
     }
     cmd.args(&components);
